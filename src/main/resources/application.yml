@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: integration-test
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.96.152.91:3306/int_test?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    initialSize: 5
+    maxActive: 30
+  jpa:
+    database: MYSQL
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: 8010
+  compression:
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+    excluded-user-agents: gozilla,traviata
+    min-response-size: 10
+    enabled: true
